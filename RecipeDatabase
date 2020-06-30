@@ -1,4 +1,4 @@
-
+//Recipe.java
 package RecipeDatabase;
 
 import java.util.HashSet;
@@ -30,7 +30,7 @@ public class Recipe {
         return this.instructions;
     }
 }
-
+//main.java
 package RecipeDatabase;
 
 import java.util.Scanner;
