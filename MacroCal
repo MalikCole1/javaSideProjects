@@ -1,0 +1,97 @@
+package MacroCalculator;
+
+import java.util.Scanner;
+
+public class MacroMain {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Are you a Male or Female?");
+        String sex = sc.nextLine();
+        Double calPerDay;
+        if(sex.equals("Male")||sex.equals("male"))
+        {
+           System.out.println("Male: ");
+            System.out.println("Weight(kg): ");
+            String weightS = sc.nextLine();
+            Double weight = Double.parseDouble(weightS);
+
+            System.out.println("Height(cm): ");
+            String heightS = sc.nextLine();
+            Double height = Double.parseDouble(heightS);
+
+            System.out.println("Age: ");
+            String ageS = sc.nextLine();
+            Double age = Double.parseDouble(ageS);
+
+            calPerDay = (10*weight)+(6.25*height)-(5*age)+5;
+
+
+        } else {
+            System.out.println("Female:");
+            System.out.println("Weight: ");
+            String weightS = sc.nextLine();
+            Double weight = Double.parseDouble(weightS);
+
+            System.out.println("Height: ");
+            String heightS = sc.nextLine();
+            Double height = Double.parseDouble(heightS);
+
+            System.out.println("Age: ");
+            String ageS = sc.nextLine();
+            Double age = Double.parseDouble(ageS);
+
+            calPerDay = (10*weight)+(6.25*height)-(5*age)-161;
+
+        }
+        System.out.println("Activity Level\n " +
+                "Sedentary: x 1.2(limited exercise)\n" +
+                "Lightly active: x 1.375 (light exercise less than three days per week)\n" +
+                "Moderately active: x 1.55 (moderate exercise most days of the week)\n" +
+                "Very active: x 1.725 (hard exercise every day)\n" +
+                "Extra active: x 1.9 (strenuous exercise two or more times per day)\n" +
+                "Enter Activity Level: ");
+        String activityLevelS = sc.nextLine();
+        Double activityLevel = Double.parseDouble(activityLevelS);
+        Double macro = activityLevel*calPerDay;
+
+        System.out.println("Macros: "+ macro+"\n" +
+                "Carbs: "+macro*0.45+"-"+macro*0.65+" of total calories\n" +
+                "Fats: "+macro*0.20+"-"+macro*0.35+" of total calories\n" +
+                "Proteins: "+macro*0.10+"-"+macro*0.35+" of total calories\n" +
+                "\n" +
+                "Carbs(4 CalPerGram):\n" +
+                "\n" +
+                "Grains, including oats, brown rice and quinoa\n" +
+                "Whole-wheat pasta\n" +
+                "Whole-grain bread\n" +
+                "Starchy vegetables, such as potatoes, sweet potatoes and winter squash\n" +
+                "Fruits like berries, bananas, pineapple and apples\n" +
+                "Beans, lentils and peas\n" +
+                "Milk and yogurt\n" +
+                "\n" +
+                "Proteins(4 CalPerGram):\n" +
+                "Egg whites\n" +
+                "Meats\n" +
+                "Poultry\n" +
+                "Fish\n" +
+                "Shellfish\n" +
+                "Tofu\n" +
+                "Milk and yogurt\n" +
+                "Protein powders\n" +
+                "\n" +
+                "Fats(9 CalPerGram):\n" +
+                "Egg yolks\n" +
+                "Olive and avocado oils\n" +
+                "Butter\n" +
+                "Nuts and nut butters\n" +
+                "Coconut oil and coconut flakes\n" +
+                "Avocado\n" +
+                "Full-fat milk and yogurt\n" +
+                "Full-fat cheese\n" +
+                "Flaxseeds and chia seeds\n" +
+                "Fatty fish like salmon and sardines");
+
+
+
+    }
+}
